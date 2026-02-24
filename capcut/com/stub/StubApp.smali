@@ -4516,8 +4516,6 @@
 
     move-result v0
 
-    goto :goto_29
-
     if-nez v0, :cond_2a
 
     .line 1256
