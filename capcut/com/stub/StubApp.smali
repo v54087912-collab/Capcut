@@ -4516,6 +4516,8 @@
 
     move-result v0
 
+    goto :goto_29
+
     if-nez v0, :cond_2a
 
     .line 1256
@@ -4525,5 +4527,63 @@
 
     .line 1250
     :cond_2a
+    :try_start_2a
+    const-string v0, "s\u007f}>zw>rx>Bu`\u007fbdcDy}u"
+
+    invoke-static {v0}, Lcom/tianyu/util/a;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    .line 1251
+    const-string v1, "BuwycdubQsdyfydiSq||Rqs{c"
+
+    invoke-static {v1}, Lcom/tianyu/util/a;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Landroid/app/Application;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    .line 1252
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .line 1253
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p0, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_54
+    .catch Ljava/lang/Exception; {:try_start_2a .. :try_end_54} :catch_55
+
+    goto :goto_29
+
+    .line 140
+    :catch_55
+    move-exception v0
+
     goto :goto_29
 .end method
