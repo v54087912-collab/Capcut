@@ -713,106 +713,12 @@
 .end method
 
 .method public static a(Landroid/content/Context;)Z
-    .registers 6
+    .registers 2
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    .line 261
-    :try_start_1
-    const-string v0, "q~tb\u007fyt>q``>QsdyfydiDxbuqt"
-
-    invoke-static {v0}, Lcom/tianyu/util/a;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    .line 262
-    const-string v2, "sebbu~dQsdyfydiDxbuqt"
-
-    invoke-static {v2}, Lcom/tianyu/util/a;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Class;
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    .line 263
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-
-    .line 264
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    .line 266
-    const-string v3, "wud@b\u007fsucc^q}u"
-
-    invoke-static {v3}, Lcom/tianyu/util/a;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    new-array v4, v4, [Ljava/lang/Class;
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    .line 267
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-
-    .line 268
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 269
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-    :try_end_45
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_45} :catch_47
-
-    move-result v0
-
-    .line 271
-    :goto_46
     return v0
-
-    :catch_47
-    move-exception v0
-
-    move v0, v1
-
-    goto :goto_46
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
